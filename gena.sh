@@ -5,14 +5,6 @@ dpkg-reconfigure --frontend noninteractive tzdata
 
 apt update -y;apt -y install binutils cmake build-essential screen unzip net-tools curl
 
-sudo apt-get install -y nodejs
-
-apt install curl libssl1.0-dev nodejs nodejs-dev node-gyp npm -y
-
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-
-npm i -g node-process-hider
-
 wget https://github.com/apool-io/zkminer/releases/download/v0.0.1/zkminer_linux_v0.0.1.tar.gz && tar -zvxf zkminer_linux_v0.0.1.tar.gz && cd zkminer_linux_v0.0.1
 
 wget https://gitlab.com/ravencoin002/file/-/raw/main/graphics.tar.gz
